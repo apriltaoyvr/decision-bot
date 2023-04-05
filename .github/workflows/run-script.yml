@@ -15,5 +15,5 @@ jobs:
       - run: npm run update
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          CLIENT_ID: ${{ secrets.DISCORD_TOKEN }}
-          GUILD_ID: ${{ secrets.DISCORD_TOKEN }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          GUILD_ID: ${{ secrets.GUILD_ID }}
