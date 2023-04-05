@@ -4,5 +4,8 @@
 .pnp.*
 node_modules
 
+# Tokens
+.env
+
 # IDE
 .vscode
