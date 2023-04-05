@@ -6,7 +6,7 @@ module.exports = {
     .setName('dog')
     .setDescription('Posts a random dog photo.'),
   async execute(interaction) {
-    const dogResult = await request(
+    const response = await request(
       'https://api.thedogapi.com/v1/images/search',
       {
         headers: {
@@ -14,7 +14,7 @@ module.exports = {
         },
       }
     );
-    const dog = await dogResult.body.json();
+    const dog = await response.body.json();
     // interaction.guild is the object representing the Guild in which the command was run
     await interaction.reply(dog[0].url);
   },
