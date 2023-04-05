@@ -7,8 +7,11 @@ module.exports = {
     .setDescription('Display commands and information.'),
   async execute(interaction) {
     await interaction.reply(
-      'Hello, I am a bot to help you make decision and post cat and dog photos.\n' +
+      'Hello, I am a bot to help you make decision and post cat and dog photos.\n\n' +
+        '\nFor information:\n' +
         `${inlineCode('/help')} for info (What you are using right now!)\n` +
+        `${inlineCode('/user')} to display your user information\n` +
+        `${inlineCode('/server')} to display server information\n` +
         '\nFor making decisions:\n' +
         `${inlineCode('/decision')} for a yes or no question\n` +
         `${inlineCode('/8ball')}for a magic 8 ball\n` +
