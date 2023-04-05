@@ -14,6 +14,10 @@ Replies with a 'Yes' or 'No' with an optional question parameter to display the 
 
 Replies with a magic 8 ball answer with an optional question parameter to display the question.
 
+### `/roll`
+
+Rolls dice, a 1d20 by default. Optional parameters for number of dice rolled and the sides of the dice.
+
 ### `/dog`
 
 Replies with a random dog photo.
