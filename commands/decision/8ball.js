@@ -44,7 +44,7 @@ module.exports = {
       await interaction.reply(answer);
     } else {
       await interaction.reply(
-        '** Question:' + question + '**' + '\n' + 'Answer:' + answer
+        `**Question:** ${question}\n**Answer:** ${answer}`
       );
     }
   },
