@@ -3,14 +3,14 @@ const { request } = require('undici');
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('cat')
-    .setDescription('Posts a random cat photo.'),
+    .setName('dog')
+    .setDescription('Posts a random dog photo.'),
   async execute(interaction) {
     const catResult = await request(
-      'https://api.thecatapi.com/v1/images/search'
+      'https://api.thedogapi.com/v1/images/search'
     );
-    const cat = await catResult.body.json();
+    const dog = await dogResult.body.json();
     // interaction.guild is the object representing the Guild in which the command was run
-    await interaction.reply(cat[0].url);
+    await interaction.reply(dog[0].url);
   },
 };
