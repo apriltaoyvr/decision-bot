@@ -7,7 +7,12 @@ module.exports = {
     .setDescription('Posts a random cat photo.'),
   async execute(interaction) {
     const catResult = await request(
-      'https://api.thecatapi.com/v1/images/search'
+      'https://api.thecatapi.com/v1/images/search',
+      {
+        headers: {
+          'X-API-KEY': process.env.CAT_API_KEY,
+        },
+      }
     );
     const cat = await catResult.body.json();
     // interaction.guild is the object representing the Guild in which the command was run
