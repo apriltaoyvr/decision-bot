@@ -6,8 +6,9 @@ module.exports = {
     .setName('cat')
     .setDescription('Posts a random cat photo.'),
   async execute(interaction) {
+    // Fetch random cat image with api key
     const response = await request(
-      'https://api.thecatapi.com/v1/images/search',
+      'https://api.thecatapi.com/v1/images/search?size=small',
       {
         headers: {
           'X-API-KEY': process.env.CAT_API_KEY,
@@ -15,7 +16,7 @@ module.exports = {
       }
     );
     const cat = await response.body.json();
-    // interaction.guild is the object representing the Guild in which the command was run
+
     await interaction.reply(cat[0].url);
   },
 };

@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
+const { bold } = require('discord.js');
 
 const answers = [
   'It is certain.',
@@ -23,11 +24,6 @@ const answers = [
   'Very doubtful.',
 ];
 
-function randomize() {
-  let random = Math.floor(Math.random() * 20);
-  return answers[random];
-}
-
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('8ball')
@@ -39,11 +35,13 @@ module.exports = {
     ),
   async execute(interaction) {
     const question = interaction.options.getString('question');
-    const answer = randomize();
-    if (question === null) {
-      await interaction.reply(answer);
-    } else {
-      await interaction.reply(`**Question:** ${question}\n**Answer:** ${answer}`);
-    }
+    const answer = answers[Math.floor(Math.random() * 20)];
+
+    // Repeat question if question param was entered
+    question === null
+      ? await interaction.reply(answer)
+      : await interaction.reply(
+          bold('Question: ') + question + '\n' + bold('Answer: ') + answer
+        );
   },
 };
