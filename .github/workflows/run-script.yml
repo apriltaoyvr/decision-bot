@@ -5,9 +5,14 @@ jobs:
   tests:
     name: run script
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 14, 16, 18 ]
+        
     steps:
       - uses: actions/checkout@v3
-      - uses: Adzz/yarn_command_action@v2.0.0
+      - uses: actions/setup-node@v3
         with:
-          package-manager: npm
-          command: update
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+      - run: npm run update
