@@ -6,6 +6,6 @@ module.exports = {
     .setDescription('Whip and nae nae.'),
   async execute(interaction) {
     await interaction.reply(`Now watch me whip.`);
-    await interaction.reply(`Now watch me nae nae.`);
+    await interaction.followUp(`Now watch me nae nae.`);
   },
 };
