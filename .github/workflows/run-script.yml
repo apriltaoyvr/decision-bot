@@ -1,0 +1,13 @@
+name: Run Script
+on: [push]
+
+jobs:
+  tests:
+    name: run script
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Adzz/yarn_command_action@v2.0.0
+        with:
+          package-manager: npm
+          command: update
