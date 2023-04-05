@@ -11,7 +11,7 @@ function randomize() {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('decide-binary')
+    .setName('decide')
     .setDescription('Helps you decide on yes/no decisions.')
     .addStringOption((option) =>
       option
@@ -24,9 +24,7 @@ module.exports = {
     if (question === null) {
       await interaction.reply(answer);
     } else {
-      await interaction.reply(
-        '** Question:** ' + question + '\n' + 'Answer:' + answer
-      );
+      await interaction.reply(`**Question:** ${question}\n**Answer:** ${answer}`);
     }
   },
 };

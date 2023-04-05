@@ -43,9 +43,7 @@ module.exports = {
     if (question === null) {
       await interaction.reply(answer);
     } else {
-      await interaction.reply(
-        `**Question:** ${question}\n**Answer:** ${answer}`
-      );
+      await interaction.reply(`**Question:** ${question}\n**Answer:** ${answer}`);
     }
   },
 };
