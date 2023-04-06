@@ -12,9 +12,7 @@ module.exports = {
     ),
   async execute(interaction) {
     const question = interaction.options.getString('question');
-    let answer;
-
-    Math.floor(Math.random() * 2) ? 'Yes' : 'No';
+    const answer = Math.floor(Math.random() * 2) ? 'Yes' : 'No';
 
     // Repeat question if question param was entered
     question === null
