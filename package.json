@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./src/index.js",
     "update": "node ./src/deploy-commands.js",
-    "deploy": "node ./src/deploy-commands.js && flyctl deploy",
+    "deploy": "flyctl deploy",
+    "build": "npm run update && npm run deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
