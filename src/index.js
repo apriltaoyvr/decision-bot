@@ -66,7 +66,6 @@ client.on(Events.InteractionCreate, async (interaction) => {
   }
 });
 
-
 client.on('messageCreate', async (message) => {
   console.log(message);
 
