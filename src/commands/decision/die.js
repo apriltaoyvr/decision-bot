@@ -27,7 +27,10 @@ module.exports = {
     const numberOfDie = interaction.options.getString('die') ?? 1;
     const numberOfSides = interaction.options.getString('sides') ?? 20;
     const result = roll(numberOfDie, numberOfSides).join(', ');
-    
-    await interaction.reply(`You rolled ${numberOfDie}d${numberOfSides}. \nThe results are ${result}.`);
+    const sum = result.reduce((partialSum, a) => partialSum + a, 0);
+
+    await interaction.reply(
+      `You rolled ${numberOfDie}d${numberOfSides}. \nThe results are ${result} (${bold(sum)})`
+    );
   },
 };
