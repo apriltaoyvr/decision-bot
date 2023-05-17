@@ -4,7 +4,7 @@ const { bold } = require('discord.js');
 function roll(die, number) {
   const results = [];
   for (let i = 0; i < die; i++) {
-    results.push(bold(Math.floor(Math.random() * number)));
+    results.push((Math.floor(Math.random() * number)));
   }
   return results;
 }
@@ -26,11 +26,11 @@ module.exports = {
   async execute(interaction) {
     const numberOfDie = interaction.options.getString('die') ?? 1;
     const numberOfSides = interaction.options.getString('sides') ?? 20;
-    const result = roll(numberOfDie, numberOfSides).join(', ');
+    const result = roll(numberOfDie, numberOfSides);
     const sum = result.reduce((partialSum, a) => partialSum + a, 0);
 
     await interaction.reply(
-      `You rolled ${numberOfDie}d${numberOfSides}. \nThe results are ${result} (${bold(sum)})`
+      `You rolled ${numberOfDie}d${numberOfSides}. \nThe results are ${result.join(', ')} (${bold(sum)})`
     );
   },
 };
