@@ -1,7 +1,5 @@
 # Packages
 .yarn
-.yarnrc.yml
-.pnp.*
 node_modules
 
 # Tokens
