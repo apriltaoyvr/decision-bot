@@ -7,13 +7,13 @@
     "start": "node ./src/index.js",
     "update": "node ./src/deploy-commands.js",
     "deploy": "flyctl deploy",
-    "build": "npm run update && npm run deploy",
+    "build": "pnpm run update && pnpm run deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@discordjs/formatters": "^0.3.0",
-    "discord.js": "^14.9.0",
-    "dotenv": "^16.0.3",
-    "undici": "^5.21.0"
+    "@discordjs/formatters": "^0.3.2",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "undici": "^5.24.0"
   }
 }
