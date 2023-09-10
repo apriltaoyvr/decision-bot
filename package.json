@@ -7,7 +7,7 @@
     "start": "node ./src/index.js",
     "update": "node ./src/deploy-commands.js",
     "deploy": "flyctl deploy",
-    "build": "pnpm run update && pnpm run deploy",
+    "build": "yarn run update && yarn run deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
