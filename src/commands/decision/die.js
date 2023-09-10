@@ -1,10 +1,10 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { bold } = require('discord.js');
 
-function roll(die, number) {
+function roll(die, sides) {
   const results = [];
   for (let i = 0; i < die; i++) {
-    results.push((Math.floor(Math.random() * number)));
+    results.push((Math.ceil(Math.random() * sides)));
   }
   return results;
 }
@@ -30,7 +30,7 @@ module.exports = {
     const sum = result.reduce((partialSum, a) => partialSum + a, 0);
 
     await interaction.reply(
-      `You rolled ${numberOfDie}d${numberOfSides}. \nThe results are ${result.join(', ')} (${bold(sum)})`
+      `You rolled ${numberOfDie}d${numberOfSides}. \nThe results are ${result.join(', ')} \nTotal: ${bold(sum)}`
     );
   },
 };
