@@ -2,7 +2,7 @@
 
 A simple Discord decision bot.
 
-![image](https://github.com/apriltaoyvr/decision-bot/assets/95392008/b69b6e5e-8b9b-457c-a154-47f0b30522be)
+![image](https://github.com/apriltaoyvr/decision-bot/assets/95392008/a4aafced-df65-40f2-b96d-8f8428d30cec)
 
 ## Commands
 
