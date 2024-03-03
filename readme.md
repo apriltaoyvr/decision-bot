@@ -1,6 +1,6 @@
 # Decision Bot
 
-A simple Discord decision bot.
+A simple Discord decision bot made with [DiscordJS](https://discord.js.org/)
 
 ![image](https://github.com/apriltaoyvr/decision-bot/assets/95392008/a4aafced-df65-40f2-b96d-8f8428d30cec)
 
